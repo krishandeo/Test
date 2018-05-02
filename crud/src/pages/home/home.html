@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic CRUD Page
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="submitForm()">
+    <ion-item>
+      <ion-label>First Name</ion-label>
+      <ion-input type="text" [(ngModel)]="model.firstName" name="firstName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Last Name</ion-label>
+      <ion-input type="text" [(ngModel)]="model.lastName" name="lastName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Age</ion-label>
+      <ion-input type="number" [(ngModel)]="model.age" name="age"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)]="model.gender" name="gender">
+        <ion-option value="m">Male</ion-option>
+        <ion-option value="f">Female</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Designation</ion-label>
+      <ion-select [(ngModel)]="model.designation" name="designation">
+        <ion-option value="fd">Full Stack Developer</ion-option>
+        <ion-option value="se">Software Engineer</ion-option>
+        <ion-option value="sa">System Admin</ion-option>
+      </ion-select>
+    </ion-item>
+    <button ion-button type="submit" block>Submit</button>
+  </form>
+</ion-content>
